@@ -67,18 +67,18 @@ Example output:
 73 01 4b 46 7f ff 0d 10 2b t=23187
 ```
 
-`t=23187` means **23.187 C**.
+`t=23187` means **23.187 °C**.
 
 ## 5) One-line command for Celsius in SSH terminal
 
 ```bash
-awk -F't=' '/t=/{printf "%.3f C\n", $2/1000}' /sys/bus/w1/devices/28-*/w1_slave
+awk -F't=' '/t=/{printf "%.3f °C\n", $2/1000}' /sys/bus/w1/devices/28-*/w1_slave
 ```
 
 ## 6) Optional loop (live reading every 2 seconds)
 
 ```bash
-watch -n 2 "awk -F't=' '/t=/{printf \"%.3f C\n\", \$2/1000}' /sys/bus/w1/devices/28-*/w1_slave"
+watch -n 2 "awk -F't=' '/t=/{printf \"%.3f °C\n\", \$2/1000}' /sys/bus/w1/devices/28-*/w1_slave"
 ```
 
 ## Troubleshooting
