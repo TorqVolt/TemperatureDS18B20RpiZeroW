@@ -75,7 +75,17 @@ Example output:
 awk -F't=' '/t=/{printf "%.3f °C\n", $2/1000}' /sys/bus/w1/devices/28-*/w1_slave
 ```
 
-## 6) Optional loop (live reading every 2 seconds)
+## 6) Python script for live reading every 5 seconds
+
+Run the script from this repository:
+
+```bash
+python3 read_sensor_loop.py
+```
+
+It will print the detected sensor value every **5 seconds** until you stop it with `Ctrl+C`.
+
+## 7) Optional shell loop (live reading every 2 seconds)
 
 ```bash
 watch -n 2 "awk -F't=' '/t=/{printf \"%.3f °C\n\", \$2/1000}' /sys/bus/w1/devices/28-*/w1_slave"
