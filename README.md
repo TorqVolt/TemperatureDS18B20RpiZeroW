@@ -173,7 +173,7 @@ python3 read_temperature.py
 3. **Open project folder on RPi**:
    - After connecting, click "File" → "Open Folder"
    - Navigate to your desired directory (e.g., `/home/pi/temperature-sensor`) and click "OK"
-   - Open integrated terminal (`Ctrl+\`` / `Cmd+\``)
+   - Open integrated terminal (`` `Ctrl+`` ` `` / `` `Cmd+`` ` ``)
 
 4. **Create or edit Python script**:
    - Create a new file: `read_temperature.py`
