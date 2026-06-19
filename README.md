@@ -118,8 +118,11 @@ def read_temperature():
                     parts = lines[1].split('t=')
                     if len(parts) > 1:
                         temp_str = parts[1].strip()
-                        temp_celsius = int(temp_str) / 1000.0
-                        return temp_celsius
+                        try:
+                            temp_celsius = int(temp_str) / 1000.0
+                            return temp_celsius
+                        except ValueError:
+                            return None
                     else:
                         return None
                 else:
@@ -177,7 +180,7 @@ python3 read_temperature.py
 3. **Open project folder on RPi**:
    - After connecting, click "File" → "Open Folder"
    - Navigate to your desired directory (e.g., `/home/pi/temperature-sensor`) and click "OK"
-   - Open integrated terminal (`` `Ctrl+`` ` `` / `` `Cmd+`` ` ``)
+   - Open integrated terminal (`` Ctrl+` `` / `` Cmd+` ``)
 
 4. **Create or edit Python script**:
    - Create a new file: `read_temperature.py`
