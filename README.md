@@ -115,9 +115,13 @@ def read_temperature():
             if lines[0].strip().endswith('YES'):
                 # Extract temperature from second line
                 if 't=' in lines[1]:
-                    temp_str = lines[1].split('t=')[1].strip()
-                    temp_celsius = int(temp_str) / 1000.0
-                    return temp_celsius
+                    parts = lines[1].split('t=')
+                    if len(parts) > 1:
+                        temp_str = parts[1].strip()
+                        temp_celsius = int(temp_str) / 1000.0
+                        return temp_celsius
+                    else:
+                        return None
                 else:
                     return None
             else:
