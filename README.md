@@ -160,7 +160,7 @@ python3 read_temperature.py
 ### Method 1: Using VSCode Remote SSH (Recommended)
 
 1. **Install Remote SSH extension** in VSCode (if not already installed):
-   - Open VSCode Extensions (Ctrl+Shift+X / Cmd+Shift+X)
+   - Open VSCode Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
    - Search for "Remote - SSH"
    - Click Install
 
@@ -173,7 +173,7 @@ python3 read_temperature.py
 3. **Open project folder on RPi**:
    - After connecting, click "File" → "Open Folder"
    - Navigate to your desired directory (e.g., `/home/pi/temperature-sensor`) and click "OK"
-   - Open integrated terminal (`` `Ctrl+` `` / `` `Cmd+` ``)
+   - Open integrated terminal (`Ctrl+\`` / `Cmd+\``)
 
 4. **Create or edit Python script**:
    - Create a new file: `read_temperature.py`
