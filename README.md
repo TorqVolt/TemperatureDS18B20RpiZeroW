@@ -10,7 +10,7 @@ DS18B20 pins (flat side facing you):
 - Middle pin: **DQ (data)** -> RPi **GPIO4** (physical pin 7)
 - Right pin: **VDD** -> RPi **3.3V**
 
-Also add a **4.7k resistor** between **DQ** and **3.3V** (pull-up).
+Also add a **4.7k or 10k resistor** between **DQ** and **3.3V** (pull-up).
 
 ## 2) Enable 1-Wire on Raspberry Pi Zero W
 
