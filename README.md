@@ -114,9 +114,12 @@ def read_temperature():
             # Check if CRC is valid
             if lines[0].strip().endswith('YES'):
                 # Extract temperature from second line
-                temp_str = lines[1].split('t=')[1]
-                temp_celsius = int(temp_str) / 1000.0
-                return temp_celsius
+                if 't=' in lines[1]:
+                    temp_str = lines[1].split('t=')[1].strip()
+                    temp_celsius = int(temp_str) / 1000.0
+                    return temp_celsius
+                else:
+                    return None
             else:
                 return None
     except Exception as e:
@@ -170,7 +173,7 @@ python3 read_temperature.py
 3. **Open project folder on RPi**:
    - After connecting, click "File" → "Open Folder"
    - Navigate to your desired directory (e.g., `/home/pi/temperature-sensor`) and click "OK"
-   - Open integrated terminal (`Ctrl+` ` / ``Cmd+` ` `)
+   - Open integrated terminal (`` `Ctrl+` `` / `` `Cmd+` ``)
 
 4. **Create or edit Python script**:
    - Create a new file: `read_temperature.py`
