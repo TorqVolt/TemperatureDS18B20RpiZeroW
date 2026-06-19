@@ -167,7 +167,7 @@ python3 read_temperature.py
 ### Method 1: Using VSCode Remote SSH (Recommended)
 
 1. **Install Remote SSH extension** in VSCode (if not already installed):
-   - Open VSCode Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+   - Open VSCode Extensions `Ctrl+Shift+X` / `Cmd+Shift+X`
    - Search for "Remote - SSH"
    - Click Install
 
